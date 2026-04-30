@@ -1,0 +1,82 @@
+/* index.html e episodes.html */
+
+body {
+    background-color: rgb(17, 17, 17);
+    padding-bottom: 35px;
+}
+
+[data-logo] {
+    position: relative;
+    top: 8px;
+}
+
+h1, h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+h2:not([data-STitle]) {
+    display: inline-block;
+    margin-left: 20px;
+    border-bottom-style: solid;
+}
+
+label {
+    color: white;
+    margin-top: 10px;
+}
+
+img:not([data-logo]) {
+    width: 180px;
+    border-radius: 15px;
+}
+
+img:not([data-logo], .SeasonImg):hover {
+    scale: 0.9;
+    box-shadow: 0 0 40px rgb(250, 250, 250);
+}
+
+/* index.html */
+
+.div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* episodes.html */
+
+[data-start] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.SeasonImg {
+    scale: 1.25;
+}
+
+p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+[data-EpisodesList] {
+    display: grid;
+    grid-template-columns: repeat(4, 0.15fr);
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 432px) {
+    [data-EpisodesList] {
+    display: grid;
+    grid-template-columns: repeat(2, 0.15fr);
+    align-items: center;
+    justify-content: center;
+    }
+}
