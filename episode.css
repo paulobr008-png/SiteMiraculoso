@@ -44,6 +44,10 @@ iframe {
     width: 800px;
     height: 450px;
     margin-top: 20px;
+
+    &:fullscreen {
+        border-radius: 0;
+    }
 }
 
 p {
